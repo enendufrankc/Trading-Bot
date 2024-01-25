@@ -1,0 +1,8 @@
+lumibot
+alpaca-trade-api
+transformers
+torch
+pandas
+numpy
+ipykernel
+timedelta
