@@ -1,0 +1,32 @@
+2024-02-02 12:39:34,474: root: INFO: MLTrader : Executing the initialize lifecycle method
+2024-02-02 12:39:36,600: root: INFO: Current backtesting datetime 2024-01-02 08:30:00-05:00
+2024-02-02 12:39:36,605: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-02 12:39:36,607: root: INFO: Current backtesting datetime 2024-01-02 09:30:00-05:00
+2024-02-02 12:39:36,607: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-02 12:39:36,609: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-02 12:39:36[0m
+2024-02-02 12:39:36,614: root: ERROR: 'MLTrader' object has no attribute 'last_trade'
+2024-02-02 12:39:36,614: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\LENOVO\1. Projects\TradingBot\env\lib\site-packages\lumibot\strategies\strategy_executor.py", line 822, in run
+    self._run_trading_session()
+  File "C:\Users\LENOVO\1. Projects\TradingBot\env\lib\site-packages\lumibot\strategies\strategy_executor.py", line 773, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\LENOVO\1. Projects\TradingBot\env\lib\site-packages\lumibot\strategies\strategy_executor.py", line 286, in func_output
+    result = func_input(self, *args, **kwargs)
+  File "C:\Users\LENOVO\1. Projects\TradingBot\env\lib\site-packages\lumibot\strategies\strategy_executor.py", line 310, in func_output
+    result = func_input(self, *args, **kwargs)
+  File "C:\Users\LENOVO\1. Projects\TradingBot\env\lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+  File "C:\Users\LENOVO\1. Projects\TradingBot\env\lib\site-packages\lumibot\strategies\strategy_executor.py", line 388, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\LENOVO\1. Projects\TradingBot\env\lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+  File "C:\Users\LENOVO\1. Projects\TradingBot\env\lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+  File "C:\Users\LENOVO\1. Projects\TradingBot\Experiment.py", line 31, in on_trading_iteration
+    if self.last_trade is None:
+AttributeError: 'MLTrader' object has no attribute 'last_trade'
+
+2024-02-02 12:39:36,619: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-02 12:39:36,628: backtest_stats: INFO: Backtest took 0:00:02.163128 for a speed of 0.000
+2024-02-02 12:39:36,628: root: WARNING: Cannot plot returns because the strategy returns are missing
+2024-02-02 12:39:36,845: root: WARNING: Cannot create a tearsheet because the strategy returns are missing
